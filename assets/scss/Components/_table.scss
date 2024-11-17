@@ -1,0 +1,233 @@
+@use "./variables" as vars;
+
+.tableBody {
+    display: flex;
+    flex-direction: column;
+    border-radius: 8px;
+    border: 1px solid vars.$neutral-200;
+    color: vars.$neutral-900;
+    background-color: vars.$white;
+  }
+  
+body.dark-mode .tableBody {
+    color: vars.$white;
+    background-color: vars.$neutral-800;
+    border: 1px solid vars.$neutral-700;
+}
+
+.tableHeader {
+    display: flex;
+    align-items: center;
+    padding: 16px;
+    justify-content: space-between;
+    border-bottom: 1px solid vars.$neutral-200;
+}
+
+body.dark-mode .tableHeader {
+    border-bottom: 1px solid vars.$neutral-700;
+}
+
+.table-search-bar {
+    background-color: vars.$neutral-50;
+    border-radius: 6px;
+    padding-inline: 10px;
+    padding-block: 6px;
+}
+
+body.dark-mode .table-search-bar {
+    background-color: vars.$neutral-700;
+}
+
+.tableRow {
+    background-color: vars.$neutral-50;
+    color: vars.$neutral-500;
+    border-bottom: 1px solid vars.$neutral-200;
+}
+
+body.dark-mode .tableRow {
+    background-color: vars.$neutral-700;
+    color: vars.$white;
+    border-bottom: 1px solid vars.$neutral-600;
+}
+
+.tableHead {
+    padding-inline: 16px;
+    padding-block: 8px;
+    text-align: left;
+    font-weight: 500;
+    font-size: 14px;
+    border-right: 1px solid vars.$neutral-200;
+}
+
+body.dark-mode .tableHead {
+    border-right: 1px solid vars.$neutral-600;
+}
+
+.custom-row-class {
+    background-color: vars.$white;
+    color: vars.$neutral-900;
+    cursor: pointer;
+    border-bottom: 1px solid vars.$neutral-100;
+}
+
+body.dark-mode .custom-row-class {
+    background-color: vars.$neutral-800;
+    color: vars.$white;
+    border-bottom: 1px solid vars.$neutral-700;
+}
+
+.custom-row-class:hover {
+    background-color: vars.$neutral-50;
+}
+
+body.dark-mode .custom-row-class:hover {
+    background-color: vars.$neutral-700;
+}
+
+.tableCell {
+    padding-inline: 14px;
+    padding-block: 12px;
+    border-right: 1px solid vars.$neutral-100;
+    color: vars.$neutral-900;
+}
+
+body.dark-mode .tableCell {
+    border-right: 1px solid vars.$neutral-700;
+    color: vars.$white;
+}
+
+.table-action {
+    background-color: transparent;
+}
+
+
+.table-action {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    padding: 8px;
+    border-radius: 4px;
+    color: vars.$neutral-700;
+    border: none;
+    cursor: pointer;
+    transition: all 0.3s ease;
+}
+
+body.dark-mode .table-action {
+    color: vars.$neutral-300;
+}
+
+.table-action:hover {
+    color: vars.$neutral-900;
+}
+
+.custom-length-menu-container {
+    position: relative !important;
+}
+
+.length-menu-dropdown {
+    position: absolute;
+    bottom: 110%;
+    right: 0;
+    width: 140px;
+    display: flex;
+    flex-direction: column;
+    gap: 4px;
+    padding: 2px;
+    background-color: vars.$white;
+    border-radius: 6px;
+    border: 1px solid vars.$neutral-200;
+}
+
+body.dark-mode .length-menu-dropdown {
+    background-color: vars.$neutral-800;
+    border: 1px solid vars.$neutral-700;
+}
+
+.length-menu-option {
+    padding: 8px;
+    cursor: pointer;
+    border: none;
+    transition: all 0.3s ease;
+    background-color: transparent;
+    color: vars.$neutral-900;
+}
+
+body.dark-mode .length-menu-option {
+    color: vars.$white;
+}
+
+.length-menu-option:hover {
+    background-color: vars.$neutral-100;
+}
+
+body.dark-mode .length-menu-option:hover {
+    background-color: vars.$neutral-700;
+}
+
+.page-link {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    width: 32px;
+    height: 32px;
+    padding: 4px;
+    background-color: vars.$white;
+    border: 1px solid vars.$neutral-200;
+    border-radius: 4px;
+    color: vars.$neutral-600;
+    text-decoration: none;
+}
+
+body.dark-mode .page-link {
+    background-color: vars.$neutral-800;
+    border: 1px solid vars.$neutral-700;
+    color: vars.$neutral-200;
+}
+
+.page-link:hover {
+    background-color: vars.$neutral-100;
+    color: vars.$neutral-900;
+    text-decoration: none;
+}
+
+body.dark-mode .page-link:hover {
+    background-color: vars.$neutral-700;
+}
+
+.page-item.active .page-link {
+    background-color: vars.$neutral-900;
+    color: vars.$white;
+    border: 1px solid vars.$neutral-900;
+}
+
+body.dark-mode .page-item.active .page-link {
+    background-color: vars.$white;
+    color: vars.$neutral-900;
+}
+
+.dataTables_info {
+    color: vars.$neutral-500;
+}
+
+body.dark-mode .dataTables_info {
+    color: vars.$neutral-400;
+}
+
+th.sorting {
+    background-image: url('../../icons/sorting.svg'); /* Default icon */
+    background-repeat: no-repeat;
+    background-position: right center;
+}
+
+th.sorting_asc {
+    background-image: url('../../icons/sorting-asc.svg'); /* Ascending icon */
+    background-repeat: no-repeat;
+    background-position: right center;
+}
+
+th.sorting_desc {
+    background-image: url('../../icons/sorting-desc.svg'); /* Descending icon */
+    background-repeat: no-repeat;
+    background-position: right center;
+}

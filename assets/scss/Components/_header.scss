@@ -1,0 +1,110 @@
+@use "./_variables.scss" as vars;
+
+.header {
+    padding: 20px;
+    background-color: vars.$white;
+    border-bottom: 1px solid vars.$neutral-200;
+    z-index: 1000;
+    position: sticky;
+    top: 0;
+}
+
+body.dark-mode .header {
+    background-color: vars.$neutral-900;
+    border-bottom: 1px solid vars.$neutral-800;
+}
+
+.toggle-icon {
+    background-color: vars.$white;
+    border-radius: 4px;
+    padding: 8px;
+    border: none;
+    transition: background-color 0.3s ease;
+    color: vars.$neutral-800;
+}
+
+body.dark-mode .toggle-icon {
+    background-color: vars.$neutral-900;
+    color: vars.$white;
+}
+
+.toggle-icon:hover {
+    background-color: vars.$neutral-100;
+}
+
+body.dark-mode .toggle-icon:hover {
+    background-color: vars.$neutral-800;
+}
+
+.header-search-bar {
+    background-color: vars.$white;
+    border-radius: 6px;
+    padding-inline: 8px;
+    padding-block: 6px;
+    border: 1px solid vars.$neutral-200;
+}
+
+body.dark-mode .header-search-bar {
+    background-color: vars.$neutral-900;
+    border: 1px solid vars.$neutral-700;
+}
+
+.header-input-search {
+    border: none;
+    outline: none;
+    background-color: transparent;
+    font-size: 16px;
+    color: vars.$neutral-900;
+}
+
+body.dark-mode .header-input-search {
+    color: vars.$white;
+}
+
+.header-input-search::placeholder {
+    color: vars.$neutral-400;
+}
+
+body.dark-mode .header-input-search::placeholder {
+    color: vars.$neutral-500;
+}
+
+.search-shortcut {
+    padding-inline: 4px;
+    padding-block: 2px;
+    font-size: 12px;
+    font-weight: 500;
+    border-radius: 4px;
+    background-color: vars.$neutral-100;
+    color: vars.$neutral-500;
+    border: 1px solid vars.$neutral-300;
+}
+
+.action-button {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    padding: 8px;
+    border-radius: 4px;
+    color: vars.$neutral-700;
+    background-color: vars.$white;
+    transition: background-color 0.3s ease;
+    border: none;
+    cursor: pointer;
+    transition: all 0.3s ease;
+}
+
+body.dark-mode .action-button {
+    color: vars.$neutral-300;
+    background-color: vars.$neutral-900;
+}
+
+.action-button:hover {
+    color: vars.$neutral-900;
+    background-color: vars.$neutral-100;
+}
+
+body.dark-mode .action-button:hover {
+    color: vars.$white;
+    background-color: vars.$neutral-800;
+}

@@ -1,0 +1,59 @@
+@use './Variables' as vars;
+
+.dropdownMenu {
+    width: 180px;
+    border: none;
+    padding: 6px;
+    background-color: vars.$white;
+    border-radius: 8px;
+    box-shadow: 0 2px 10px 0 rgba(0, 0, 0, 0.04);
+    z-index: 1000;
+    border: 1px solid vars.$neutral-200;
+}
+
+body.dark-mode .dropdownMenu {
+    background-color: vars.$neutral-800;
+    border: 1px solid vars.$neutral-700;
+}
+
+.dropdownItem {
+    width: 100%;
+    display: flex;
+    align-items: center;
+    justify-content: flex-start;
+    padding: 8px;
+    gap: 8px;
+    border-radius: 4px;
+    border: none;
+    background-color: vars.$white;
+    color: vars.$neutral-800;
+}
+
+body.dark-mode .dropdownItem {
+    color: vars.$white;
+    background-color: vars.$neutral-800;
+}
+
+.dropdownItem:hover {
+    background-color: vars.$neutral-50;
+}
+
+body.dark-mode .dropdownItem:hover {
+    background-color: vars.$neutral-700;
+}
+
+.dropdownItem.delete-button {
+    color: #FF5C5C;
+}
+
+body.dark-mode .dropdownItem.delete-button {
+    color: #FF5C5C;
+}
+
+.dropdownItem.delete-button:hover {
+    background-color: rgba(255, 92, 92, 0.08);
+}
+
+body.dark-mode .dropdownItem.delete-button:hover {
+    background-color: rgba(255, 92, 92, 0.1);
+}

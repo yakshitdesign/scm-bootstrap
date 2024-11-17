@@ -1,0 +1,42 @@
+@use "./variables" as vars;
+
+.form-check-input {
+    position: relative !important;
+    cursor: pointer;
+    margin-left: 0px;
+    margin: 0px;
+}
+
+body.dark-mode .form-check-input {
+    background-color: vars.$neutral-800;
+    border-color: vars.$neutral-700;
+}
+
+.form-check-input:checked {
+    background-color: vars.$neutral-900;
+    border-color: vars.$neutral-900;
+}
+
+body.dark-mode .form-check-input:checked {
+    filter: invert(1);
+}
+
+
+.form-check-input:focus {
+    border-color: vars.$neutral-400;
+    box-shadow: 0 0 0 0.25rem rgba(vars.$neutral-900, 0.08);
+}
+
+body.dark-mode .form-check-input:focus {
+    border-color: vars.$neutral-400;
+    box-shadow: 0 0 0 0.25rem rgba(vars.$white, 0.08);
+}
+
+.form-check-input[type=checkbox]:indeterminate {
+    background-color: vars.$neutral-900;
+    border-color: vars.$neutral-900;
+}
+
+body.dark-mode .form-check-input[type=checkbox]:indeterminate {
+    filter: invert(1);
+}

@@ -1,0 +1,81 @@
+@use "./variables.scss" as vars;
+
+.notification-dropdown {
+    width: 320px !important;
+    color: vars.$neutral-900;
+    background-color: vars.$white;
+    border-radius: 8px;
+    box-shadow: 0 0 8px 0 rgba(0, 0, 0, 0.04);
+    border: 1px solid vars.$neutral-300;
+    overflow: hidden;
+}
+
+body.dark-mode .notification-dropdown {
+    background-color: vars.$neutral-800;
+    color: vars.$white;
+    border: 1px solid vars.$neutral-600;
+}
+
+.notification-dropdown-header {
+    padding: 12px;
+    border-bottom: 1px solid vars.$neutral-300;
+    color: vars.$neutral-900;
+}
+
+body.dark-mode .notification-dropdown-header {
+    color: vars.$white;
+    border-bottom: 1px solid vars.$neutral-700;
+}
+
+.notification-dropdown-item {
+    display: flex;
+    align-items: center;
+    gap: 8px;
+    padding: 12px;
+    border-bottom: 1px solid vars.$neutral-200;
+    text-decoration: none;
+    color: vars.$neutral-700;
+    font-size: 14px;
+    line-height: 1.25;
+    font-weight: 400;
+}
+
+body.dark-mode .notification-dropdown-item {
+    color: vars.$white;
+    border-bottom: 1px solid vars.$neutral-700;
+}
+
+.notification-dropdown-item:hover {
+    background-color: vars.$neutral-50;
+    text-decoration: none;
+    color: vars.$neutral-900;
+}
+
+body.dark-mode .notification-dropdown-item:hover {
+    background-color: vars.$neutral-700;
+}
+
+.notification-dropdown-footer {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    text-decoration: none;
+    padding: 12px 20px;
+    background-color: vars.$neutral-50;
+    color: vars.$neutral-900;
+}
+
+body.dark-mode .notification-dropdown-footer {
+    background-color: vars.$neutral-700;
+    color: vars.$white;
+}
+
+.notification-dropdown-footer:hover {
+    text-decoration: none;
+    background-color: vars.$neutral-200;
+    color: vars.$neutral-900;
+}
+
+body.dark-mode .notification-dropdown-footer:hover {
+    background-color: vars.$neutral-600;
+}

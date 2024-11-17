@@ -1,0 +1,43 @@
+@use "../../node_modules/bootstrap/scss/bootstrap" as bootstrap;
+@use "./Components/_variables.scss" as vars;
+@use "./Components/_utilities.scss" as utilities;
+@use "./Components/_sidebar.scss" as sidebar;
+@use "./Components/_header.scss" as header;
+@use "./Components/_extras.scss" as extras;
+@use "./Components/custom-button" as buttons;
+@use "./Components/_notifications.scss" as notifications;
+@use "./Components/custom-dropdown" as dropdown;
+@use "./Components/_table.scss" as table;
+@use "./Components/custom-select" as select;
+@use "./Components/checkbox" as Checkbox;
+@use "./Components/_badge.scss" as badge;
+
+
+body {
+  font-family: "Schibsted Grotesk", sans-serif;
+  background-color: #f1f5f9;
+  color: vars.$neutral-900;
+  min-width: 320px;
+}
+
+.dark-mode {
+  background-color: vars.$neutral-900;
+  color: vars.$white;
+}
+
+.main-body {
+  padding: 32px;
+  height: 100%;
+}
+
+@media (max-width: 768px) {
+  .main-body {
+    padding: 24px;
+  }
+}
+
+@media (max-width: 576px) {
+  .main-body {
+    padding: 12px;
+  }
+}

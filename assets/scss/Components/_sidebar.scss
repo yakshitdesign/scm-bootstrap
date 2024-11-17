@@ -1,0 +1,339 @@
+@use "./_variables.scss" as vars;
+
+.sidebar {
+    height: 100vh;
+    width: 280px;
+    background-color: vars.$white;
+    border-right: 1px solid vars.$neutral-200;
+    transition: width 0.3s ease-in-out;
+}
+  
+body.dark-mode .sidebar {
+    background-color: vars.$neutral-800;
+    border-right: 1px solid vars.$neutral-700;
+}
+
+.sidebar-header {
+    border-bottom: 1px solid vars.$neutral-200;
+}
+
+body.dark-mode .sidebar-header {
+    border-bottom: 1px solid vars.$neutral-700;
+}
+
+.sidebar.collapsed {
+    width: 80px;
+    overflow: hidden;
+    transition: width 0.3s ease;
+}
+
+// Sidebar Logo
+.logo {
+    width: 100%;
+    display: block;
+}
+
+/* Dark mode styles */
+body.dark-mode .logo-full-light,
+body.dark-mode .logo-icon-light {
+    display: none;
+}
+
+body.dark-mode .logo-full-dark,
+body.dark-mode .logo-icon-dark {
+    display: block;
+}
+
+/* Collapsed sidebar styles */
+#sidebar.collapsed .logo-full-light,
+#sidebar.collapsed .logo-full-dark {
+    display: none;
+}
+
+#sidebar.collapsed .logo-icon-light,
+#sidebar.collapsed .logo-icon-dark {
+    display: block;
+}
+
+// Sidebar Navigation
+
+.sidebar-nav-header {
+    display: flex;
+    align-items: center;
+    padding: 4px 8px;
+    font-size: 12px;
+    font-style: normal;
+    font-weight: 500;
+    line-height: 16px;
+    letter-spacing: 0.48px;
+    text-transform: uppercase;
+    color: vars.$neutral-400;
+    transition: justify-content 0.3s ease-in-out !important;
+}
+
+body.dark-mode .sidebar-nav-header {
+    color: vars.$neutral-500 !important;
+}
+
+.nav-dot {
+    width: 4px;
+    height: 4px;
+    background-color: vars.$neutral-300;
+    border-radius: 100%;
+}
+
+body.dark-mode .nav-dot {
+    background-color: vars.$neutral-600;
+}
+
+.sidebar-nav-item {
+    display: flex;
+    align-items: center;
+    gap: 4px;
+    padding: 8px;
+    border-radius: 4px;
+    font-size: 14px;
+    font-style: normal;
+    font-weight: 500;
+    line-height: 20px;
+    color: vars.$neutral-600;
+    background-color: transparent;
+    transition: all 0.3s ease-in-out;
+    text-decoration: none;
+    cursor: pointer;
+}
+
+.sidebar-nav-item:hover {
+    color: vars.$neutral-900;
+    background-color: vars.$neutral-100;
+    text-decoration: none;
+}
+
+body.dark-mode .sidebar-nav-item {
+    color: vars.$neutral-300;
+}
+
+body.dark-mode .sidebar-nav-item:hover {
+    color: vars.$white;
+    background-color: vars.$neutral-700;
+}
+
+.sidebar-nav-item.active {
+    background-color: vars.$neutral-100;
+    color: vars.$neutral-900;
+    border-radius: 4px;
+}
+
+body.dark-mode .sidebar-nav-item.active {
+    background-color: vars.$neutral-700;
+    color: vars.$white;
+}
+
+.sidebar-nav-item .active-menu-elements,
+.sidebar-nav-item .active-menu-line {
+    display: none;
+}
+
+.sidebar-nav-item.active .active-menu-elements,
+.sidebar-nav-item.active .active-menu-line {
+    display: block;
+}
+
+#sidebar.collapsed .sidebar-nav-item .active-menu-elements {
+    display: none;
+}
+
+#sidebar.collapsed .sidebar-nav-header {
+    justify-content: center !important;
+}
+
+// Sidebar Footer
+.sidebar-footer {
+    padding: 8px;
+    border-top: 1px solid vars.$neutral-200;
+}
+
+body.dark-mode .sidebar-footer {
+    border-top: 1px solid vars.$neutral-700;
+}
+
+.btn-sidebar-footer {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    padding: 12px;
+    gap: 12px;
+    border-radius: 6px;
+    width: 100%;
+    background-color: vars.$white;
+    transition: all 0.3s ease-in-out;
+    border: none !important;
+    outline: none !important;
+    box-shadow: none !important;
+}
+
+#sidebar.collapsed .btn-sidebar-footer {
+    justify-content: center !important;
+    align-items: center !important;
+}
+
+body.dark-mode .btn-sidebar-footer {
+    background-color: vars.$neutral-800;
+}
+
+.btn-sidebar-footer:hover {
+    background-color: vars.$neutral-100;
+}
+
+body.dark-mode .btn-sidebar-footer:hover {
+    background-color: vars.$neutral-700;
+}
+
+.btn-sidebar-footer::after {
+    content: none !important;
+    display: none !important;
+}
+
+.sidebar-user-name {
+    font-size: 14px;
+    font-weight: 500;
+    color: vars.$neutral-900;
+}
+
+body.dark-mode .sidebar-user-name {
+    color: vars.$white;
+}
+
+.dropdown-icon {
+    color: vars.$neutral-800;
+}
+
+body.dark-mode .dropdown-icon {
+    color: vars.$white;
+}
+
+// Dropdown Menu
+
+.user-menu {
+    width: 240px;
+    background-color: vars.$white;
+    border: 1px solid vars.$neutral-200;
+    border-radius: 6px;
+    box-shadow: 0 10px 15px -3px rgb(0 0 0 / 0.1), 0 4px 6px -4px rgb(0 0 0 / 0.1);
+}
+
+body.dark-mode .user-menu {
+    background-color: vars.$neutral-800;
+    border: 1px solid vars.$neutral-700;
+}
+
+.sidebar-signout {
+    display: flex;
+    align-items: center;
+    justify-content: start;
+    gap: 8px;
+    width: 100%;
+    padding: 8px;
+    border-radius: 6px;
+    background-color: transparent;
+    color: #f43f5e;
+    border: none !important;
+    outline: none !important;
+    box-shadow: none !important;
+    transition: all 0.3s ease-in-out;
+}
+
+.sidebar-signout:hover {
+    background-color: #fff1f2;
+    color: #e11d48;
+}
+
+body.dark-mode .sidebar-signout {
+    color: #f43f5e;
+}
+
+body.dark-mode .sidebar-signout:hover {
+    background-color: #e11d4716;
+    color: #e11d48;
+}
+
+#user-menu {
+    bottom: 80px;
+    left: 20px;
+    z-index: 1000;
+    transition: opacity 0.3s ease-in-out;
+}
+
+#user-menu.d-none {
+    opacity: 0;
+    pointer-events: none;
+}
+
+#user-menu:not(.d-none) {
+    opacity: 1;
+    pointer-events: auto;
+}
+
+// Sidebar for mobile
+
+
+.modal-effect {
+    z-index: 999;
+    width: 100%;
+    background-color: #00000017;
+    position: absolute; /* Ensure it's not sticky */
+    top: 0;
+    left: 0;
+    transition: transform 0.3s ease-in-out;
+    transform: translateX(-100%); /* Initially hidden off-screen */
+}
+  
+.modal-effect.active {
+    transform: translateX(0); /* Slide in when active */
+}
+
+#sidebar-container {
+    position: fixed;
+    top: 0;
+    left: 0;
+    z-index: 1050;
+    width: 280px;
+    max-width: 100vw;
+    background-color: #fff;
+    transform: translateX(-100%);
+    transition: transform 0.3s ease-in-out;
+    display: none;
+
+    &.active {
+        display: block;
+        transform: translateX(0);
+    }
+}
+
+#overlay {
+    position: fixed;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    background-color: rgba(0, 0, 0, 0.5);
+    opacity: 0;
+    transition: opacity 0.3s ease-in-out;
+    z-index: 1040;
+    display: none;
+
+    &.active {
+        display: block;
+        opacity: 1;
+    }
+}
+
+@media (min-width: 1280px) {
+    #sidebar-container {
+        position: sticky;
+        transform: none;
+        width: auto;
+        display: flex;
+    }
+}
+  

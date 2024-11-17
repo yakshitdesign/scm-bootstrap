@@ -1,0 +1,11 @@
+@use "./_variables.scss" as vars;
+
+.vertical-line {
+    width: 1px;
+    height: 24px;
+    background-color: vars.$neutral-200;
+}
+
+body.dark-mode .vertical-line {
+    background-color: vars.$neutral-800;
+}

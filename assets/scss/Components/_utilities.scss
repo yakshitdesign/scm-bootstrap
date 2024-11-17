@@ -1,0 +1,51 @@
+@use "./variables.scss" as vars;
+
+// Custom Padding
+.p-12 {
+    padding: 12px;
+}
+
+.p-16 {
+    padding: 16px;
+}
+
+.p-20 {
+    padding: 20px;
+}
+
+// Custom Gap
+.gap-20 {
+    gap: 20px;
+}
+
+// Custom Text
+
+.text-xs {
+    font-size: 12px;
+    font-weight: 400;
+    color: vars.$neutral-900;
+}
+
+body.dark-mode .text-xs {
+    color: vars.$white;
+}
+
+.text-sm {
+    font-size: 14px;
+    font-weight: 400;
+    color: vars.$neutral-900;
+}
+
+body.dark-mode .text-sm {
+    color: vars.$white;
+}
+
+.text-lg {
+    font-size: 20px;
+    color: vars.$neutral-900;
+}
+
+body.dark-mode .text-lg {
+    color: vars.$white;
+}
+
